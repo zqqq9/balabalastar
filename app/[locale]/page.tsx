@@ -6,7 +6,6 @@ import { Sparkles, Calendar, Wand2, Star, TrendingUp, Users, BookOpen, HelpCircl
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations('home');
   
   return {
     title: locale === 'zh' 
