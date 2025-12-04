@@ -6,7 +6,6 @@ import { Sparkles, Wand2, BookOpen } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations('fortune');
   
   return {
     title: locale === 'zh' 
