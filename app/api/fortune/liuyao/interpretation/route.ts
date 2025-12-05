@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import type { LiuYaoResult } from '@/lib/liuyao-calculator';
 
 interface InterpretationRequest {
   yaos: Array<{
