@@ -58,7 +58,7 @@ export default async function FortunePage({ params }: { params: Promise<{ locale
       href: '/fortune/liuyao',
       color: 'text-green-500',
       bgColor: 'bg-green-50 dark:bg-green-950',
-      available: false,
+      available: true,
     },
   ];
 
