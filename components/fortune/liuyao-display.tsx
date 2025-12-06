@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import type { Yao, Hexagram } from '@/lib/liuyao-calculator';
@@ -14,7 +13,6 @@ interface LiuYaoDisplayProps {
 }
 
 export function LiuYaoDisplay({ yaos, benGua, bianGua, changingYaos, locale = 'zh' }: LiuYaoDisplayProps) {
-  const t = useTranslations('fortune');
   const isZh = locale === 'zh';
 
   // 渲染单个爻
