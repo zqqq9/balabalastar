@@ -230,7 +230,7 @@ function parseAIResponse(
   benGua: { nameZh: string; nameEn: string; guaCi: string; yaoCi: string[]; meaning: string },
   bianGua: { nameZh: string; nameEn: string; guaCi: string; yaoCi: string[]; meaning: string } | null,
   changingYaos: number[],
-  question?: string,
+  question: string | undefined,
   locale: string = 'zh'
 ): {
   summary: string;
@@ -274,7 +274,7 @@ function parseAIResponse(
  * 生成模拟解读（备用方案，支持多语言）
  */
 function generateInterpretation(
-  yaos: Array<{ type: 'yang' | 'yin'; change: 'none' | 'change'; value: number }>,
+  _yaos: Array<{ type: 'yang' | 'yin'; change: 'none' | 'change'; value: number }>,
   benGua: { nameZh: string; nameEn: string; guaCi: string; yaoCi: string[]; meaning: string },
   bianGua: { nameZh: string; nameEn: string; guaCi: string; yaoCi: string[]; meaning: string } | null,
   changingYaos: number[],
