@@ -278,6 +278,3 @@ export function generateLiuYao(locale: string = 'zh'): LiuYaoResult {
     interpretation,
   };
 }
-
-// 导出类型
-export type { Hexagram, Yao, YaoType, YaoChange };
