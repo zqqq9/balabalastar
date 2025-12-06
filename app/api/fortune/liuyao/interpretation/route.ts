@@ -36,9 +36,11 @@ interface GLM4Response {
 }
 
 export async function POST(request: NextRequest) {
+  let locale = 'zh'; // 默认语言
   try {
     const body: InterpretationRequest = await request.json();
-    const { yaos, benGua, bianGua, changingYaos, question, locale = 'zh' } = body;
+    locale = body.locale || 'zh';
+    const { yaos, benGua, bianGua, changingYaos, question } = body;
 
     if (!yaos || yaos.length === 0 || !benGua) {
       const errorMessage = locale === 'en' 
